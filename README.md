@@ -13,3 +13,12 @@ Current v8 versions available:
 + 8.0
 + 8.4 (isolate logger disabled due to crash on initialization).
 + 9.4 arm, arm64, x86, x64
+include_rules = [
+  "+libplatform/libplatform-export.h",
+]
+
+specific_include_rules = {
+  "libplatform\.h": [
+    "+libplatform/v8-tracing.h",
+  ],
+}
